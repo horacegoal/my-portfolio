@@ -9,8 +9,9 @@
         $post = get_page_by_path($slug, OBJECT, 'post');
         $content = $post->post_content;
         ?>
-        <div class="contact-text text-center">
-            <?php echo $content; ?>
+        <div class="contact-text text-center leading-10">
+            <!-- render content and shortcode -->
+            <?php echo apply_filters('the_content', $content); ?>
         </div>
         <?php echo do_shortcode('[wpforms id="24"]'); ?>
     </div>

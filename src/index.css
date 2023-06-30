@@ -300,3 +300,7 @@ header {
   border-radius: 0 !important;
   border-color: #000000 !important;
 }
+
+.contact-text i {
+  opacity: 0.2;
+}

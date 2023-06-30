@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener('load', function (e) {
-    const textGp = new SplitType('.contact-text', {
+    const textGp = new SplitType('.contact-text p', {
       types: 'chars',
       charClass: 'contact-char',
     });
@@ -250,5 +250,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
         duration: 0.5,
       }
     );
+
+    gsap.to('.contact-text i', {
+      scrollTrigger: {
+        trigger: document.querySelector('.contact-text'),
+        start: 'top 95%',
+      },
+      y: 0,
+      opacity: 1,
+      delay: 1,
+      duration: 0.5,
+    });
   });
 });
