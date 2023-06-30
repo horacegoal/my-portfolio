@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  word-break: keep-all;
 }
 
 body {

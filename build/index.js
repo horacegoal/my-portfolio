@@ -10969,19 +10969,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
   window.addEventListener('load', function (e) {
     //about text 1
     const textGp1 = new split_type__WEBPACK_IMPORTED_MODULE_5__["default"]('.about-content .wp-block-columns:first-of-type p', {
-      types: 'chars',
-      charClass: 'about1-text'
+      types: 'words',
+      wordClass: 'about1-text'
     });
     const textGp2 = new split_type__WEBPACK_IMPORTED_MODULE_5__["default"]('.about-content .wp-block-columns:first-of-type li', {
       //set class of each char to text1
-      types: 'chars',
-      charClass: 'about1-text'
+      types: 'words',
+      wordClass: 'about1-text'
     });
     ///////////
     //about text 2
     const textGp3 = new split_type__WEBPACK_IMPORTED_MODULE_5__["default"]('.about-content .wp-block-columns:nth-of-type(2) p', {
-      types: 'chars',
-      charClass: 'about2-text'
+      types: 'words',
+      wordClass: 'about2-text'
     });
     const row1 = document.querySelector('.about-content .wp-block-columns:first-of-type');
     gsap__WEBPACK_IMPORTED_MODULE_6__["default"].to('.about1-text', {
@@ -10989,7 +10989,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: row1,
         start: 'top 95%'
       },
-      stagger: 0.004,
+      stagger: 0.02,
       opacity: 1,
       duration: 0.5
     });
@@ -11009,7 +11009,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         trigger: row2,
         start: 'top 95%'
       },
-      stagger: 0.015,
+      stagger: 0.07,
       opacity: 1,
       duration: 0.5
     });
@@ -11051,17 +11051,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener('load', function (e) {
     const textGp = new split_type__WEBPACK_IMPORTED_MODULE_5__["default"]('.contact-text p', {
-      types: 'chars',
-      charClass: 'contact-char'
+      types: 'words',
+      wordClass: 'contact-word'
     });
-    gsap__WEBPACK_IMPORTED_MODULE_6__["default"].fromTo('.contact-char', {
+    gsap__WEBPACK_IMPORTED_MODULE_6__["default"].fromTo('.contact-word', {
       opacity: 0.1
     }, {
       scrollTrigger: {
         trigger: document.querySelector('.contact-text'),
         start: 'top 95%'
       },
-      stagger: 0.005,
+      stagger: 0.02,
       opacity: 1,
       duration: 0.5
     });
@@ -11085,7 +11085,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       },
       y: 0,
       opacity: 1,
-      delay: 1,
+      delay: 0.6,
       duration: 0.5
     });
   });

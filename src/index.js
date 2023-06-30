@@ -101,16 +101,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
       const textGp1 = new SplitType(
         '.about-content .wp-block-columns:first-of-type p',
         {
-          types: 'chars',
-          charClass: 'about1-text',
+          types: 'words',
+          wordClass: 'about1-text',
         }
       );
       const textGp2 = new SplitType(
         '.about-content .wp-block-columns:first-of-type li',
         {
           //set class of each char to text1
-          types: 'chars',
-          charClass: 'about1-text',
+          types: 'words',
+          wordClass: 'about1-text',
         }
       );
       ///////////
@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
       const textGp3 = new SplitType(
         '.about-content .wp-block-columns:nth-of-type(2) p',
         {
-          types: 'chars',
-          charClass: 'about2-text',
+          types: 'words',
+          wordClass: 'about2-text',
         }
       );
 
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           trigger: row1,
           start: 'top 95%',
         },
-        stagger: 0.004,
+        stagger: 0.02,
         opacity: 1,
         duration: 0.5,
       });
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           trigger: row2,
           start: 'top 95%',
         },
-        stagger: 0.015,
+        stagger: 0.07,
         opacity: 1,
         duration: 0.5,
       });
@@ -213,12 +213,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener('load', function (e) {
     const textGp = new SplitType('.contact-text p', {
-      types: 'chars',
-      charClass: 'contact-char',
+      types: 'words',
+      wordClass: 'contact-word',
     });
 
     gsap.fromTo(
-      '.contact-char',
+      '.contact-word',
       {
         opacity: 0.1,
       },
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           trigger: document.querySelector('.contact-text'),
           start: 'top 95%',
         },
-        stagger: 0.005,
+        stagger: 0.02,
         opacity: 1,
         duration: 0.5,
       }
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       },
       y: 0,
       opacity: 1,
-      delay: 1,
+      delay: 0.6,
       duration: 0.5,
     });
   });
